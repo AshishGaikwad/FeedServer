@@ -11,4 +11,5 @@ import feed.entity.UserEntity;
 public interface UserRepository extends MongoRepository<UserEntity, String>{
 	
 	List<UserEntity> findByMobile(String mobile);
+	List<UserEntity> findByUserName(String pUsername);
 }

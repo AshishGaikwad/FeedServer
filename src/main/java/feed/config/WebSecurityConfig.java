@@ -50,7 +50,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		httpSecurity.csrf().disable()
 				// dont authenticate this particular request
 				.authorizeRequests().antMatchers("/auth/otp/send").permitAll().and()
-				.authorizeRequests().antMatchers("/auth/otp/verify").permitAll().
+				.authorizeRequests().antMatchers("/auth/otp/verify").permitAll().and()
+				.authorizeRequests().antMatchers("/filters/get").permitAll().
 				// all other requests need to be authenticated
 				anyRequest().authenticated().and().
 				// make sure we use stateless session; session won't be used to

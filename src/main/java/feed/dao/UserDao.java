@@ -5,4 +5,5 @@ import feed.entity.UserEntity;
 public interface UserDao {
 	public UserEntity getUserProfile(String pMobileNo);
 	public UserEntity saveUser(UserEntity pUserEntity);
+	public boolean isUsernameExist(String pUsername);
 }
